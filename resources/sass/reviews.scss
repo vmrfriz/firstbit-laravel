@@ -1,0 +1,27 @@
+.review {
+    margin-bottom: 15px;
+
+    &_header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_image {
+        max-width: 320px;
+        max-height: 240px;
+    }
+
+    &_footer {
+        color: #aaa;
+        font-size: .8em;
+    }
+}
+
+.adm-btn {
+    font-size: .8em;
+    text-decoration: underline dotted;
+
+    &_disabled {
+        color: #aaa;
+    }
+}

@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('reviews');
-});
+Route::get('/', 'ReviewsController@index'); //->only(['index', 'store', 'edit', 'update']);
+Route::post('/', 'ReviewsController@store');
+Route::get('/edit/{review}', 'ReviewsController@edit')->middleware('auth');
+Route::put('/edit/{review}', 'ReviewsController@update')->middleware('auth');
+
+Auth::routes(['register' => false, 'request' => false, 'reset' => false]);

@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Route::middleware('auth')->post('/publish-review', 'PublishReviewRequest@publish');
+Route::post('/publish-review/{review}', 'ReviewsController@publish'); //->middleware('auth');
